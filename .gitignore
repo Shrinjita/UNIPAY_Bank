@@ -1,0 +1,11 @@
+# Node modules should NOT be tracked
+node_modules/
+
+# Build folder (optional)
+build/
+
+# Environment files (optional)
+.env
+
+# System files
+.DS_Store
