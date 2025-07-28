@@ -19,8 +19,6 @@
 
 *Revolutionizing digital banking with seamless payments, intelligent analytics, and enterprise-grade security*
 
-[🚀 Live Demo](#) • [📖 Documentation](#) • [🎯 Features](#features) • [🛠️ Installation](#installation)
-
 </div>
 
 ---
@@ -366,8 +364,8 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 | Role | Name | LinkedIn |
 |------|------|----------|
 | **Team Lead** | Shrinjita Paul | [LinkedIn](https://www.linkedin.com/in/shrinjita-paul-8a940a248/) |
-| **Full Stack Developer** | Sahil Varde | [LinkedIn](https://linkedin.com/in/sahilvarde) |
-| **Frontend Architect** | Team Member 2 | [LinkedIn](#) |
+| **Full Stack Developer** | Sahil Varde | [LinkedIn](https://www.linkedin.com/in/sahil-varde-677516268?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app) |
+| **Frontend Architect** | Tanmay Pawara | [LinkedIn](https://www.linkedin.com/in/tanmay-pawara-b5219536a/) |
 
 
 </div>
