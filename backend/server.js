@@ -26,17 +26,31 @@ if (accountSid && authToken) {
 // Stripe config
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
+const allowedOrigins = [
+  'https://unipay-bank-352ryp2br-sahil-vardes-projects.vercel.app',
+  // you can add more if needed, like localhost for local testing:
+  'http://localhost:3000',
+  'http://localhost:8080',
+];
+
+app.use(express.json());
 // CORS config allowing your frontend
 const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:8080'; // Update with your frontend URL
 app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin) return callback(null, true); // Allow Postman etc.
-    if (origin === FRONTEND_URL) return callback(null, true);
-    callback(new Error('Not allowed by CORS'));
-  }
+  origin: function(origin, callback) {
+    // allow requests with no origin (like mobile apps, curl, postman)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = `The CORS policy for this site does not allow access from the specified Origin: ${origin}`;
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true, // if you need cookies or authorization headers
 }));
 
-app.use(express.json());
+
 
 // Setup upload directory and multer storage
 const uploadDir = path.join(__dirname, 'uploads');
