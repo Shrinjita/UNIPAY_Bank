@@ -95,11 +95,11 @@ const Dashboard = () => {
         </div>
         
         {/* Transaction Details Modal */}
-        <TransactionDetails 
+        {/* <TransactionDetails 
           transaction={selectedTransaction}
           open={isTransactionModalOpen}
           onClose={() => setIsTransactionModalOpen(false)}
-        />
+        /> */}
       </div>
       
       {/* Chat Bot */}

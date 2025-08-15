@@ -7,4 +7,12 @@ export interface Transaction {
   amount: number;
   category: string;
   status: string;
+  time: string;
+  type: string;
+  reference?: string;
+  paymentMethod?: string;
+  notes?: string;
+  tags?: string[];
+  location: string;
+  scheduledDate?: string; // For scheduled transactions
 }

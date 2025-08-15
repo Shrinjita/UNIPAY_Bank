@@ -121,7 +121,7 @@ const TransactionHistory: React.FC<TransactionHistoryProps> = ({ onViewDetails }
         </div>
 
         <TransactionTable
-          transactions={filteredTransactions}
+          // transactions={filteredTransactions}
           onViewDetails={onViewDetails}
         />
 
